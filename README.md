@@ -47,3 +47,73 @@ use_playwright |	Enable JavaScript rendering for handling dynamic content. |	Tru
 respect_robots |	Whether to honor robots.txt rules. |	True
 delay_range |	Range of random delays (in seconds) between requests to simulate human-like behavior. |	(2, 5)
 
+
+## How It Works
+1.**Initialization:**
+
+- Configures retailer-specific patterns for product and pagination detection.
+- Sets up default HTTP headers and user-agent rotation.
+2. **Crawling:**
+
+- Fetches pages asynchronously.
+- Detects valid product URLs based on domain-specific patterns.
+- Handles JavaScript-heavy websites using Playwright when necessary.
+
+3. **Link Extraction:**
+
+- Extracts and normalizes links using BeautifulSoup.
+- Filters links based on retailer-specific patterns and domain rules.
+
+4. **Output:**
+
+- Saves discovered product URLs to a JSON file.
+- Logs crawling statistics.
+
+## Example Output
+**JSON File (product_urls.json):**
+
+```json
+Copy code
+{
+    "target.com": [
+        "https://target.com/product1",
+        "https://target.com/product2"
+    ]
+}
+```
+
+**Console Output:**
+
+```yaml
+Copy code
+Crawling Statistics:
+Total Requests: 200
+Successful Requests: 180
+Failed Requests: 20
+Success Rate: 90.00%
+Total Duration: 300.00 seconds
+```
+
+## Dependencies
+- aiohttp: Asynchronous HTTP client for efficient web crawling.
+- playwright: Handles JavaScript rendering for dynamic web pages.
+- BeautifulSoup: Parses HTML and extracts links.
+- fake_useragent: Generates randomized user-agents.
+- aiohttp_retry: Adds retry logic to failed requests.
+- brotli and gzip: Decompression libraries for handling encoded responses.
+
+```bash
+pip install aiohttp playwright beautifulsoup4 fake-useragent aiohttp-retry brotli
+```
+
+## Limitations
+- Heavy JavaScript Sites: Crawling JavaScript-heavy websites is slower due to rendering overhead.
+- Timeouts: Large websites with high depth may cause timeouts.
+- Captcha Handling: No support for bypassing captchas.
+  
+## Future Improvements
+- Add support for more retailers with custom patterns. (Zip based/ Region Locked Sites)
+- Integrate proxy rotation for IP-based rate limiting. (Squid Proxy Server)
+- Implement captcha-solving capabilities.
+
+
