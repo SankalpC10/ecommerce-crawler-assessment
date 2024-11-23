@@ -205,7 +205,19 @@ class EcommerceCrawler:
 
 
 def main():
-    domains = ["samsclub.com"]
+    domains = [
+        "amazon.in",
+        "amazon.com",
+        "albertsons.com",
+        "argos.co.uk",
+        "lowes.com",
+        "ebay.com",
+        "hm.com",
+        "etsy.com",
+        "samsclub.com",
+        "target.com"
+    ]
+
 
     # Custom headers
     # custom_headers = {

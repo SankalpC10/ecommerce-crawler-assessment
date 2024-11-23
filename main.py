@@ -381,7 +381,7 @@ class EnhancedEcommerceCrawler:
 
 def main():
     domains = [
-        "target.com",
+        "flipkart.com"
     ]
 
     crawler = EnhancedEcommerceCrawler(
