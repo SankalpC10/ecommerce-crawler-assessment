@@ -73,19 +73,21 @@ delay_range |	Range of random delays (in seconds) between requests to simulate h
 **JSON File (product_urls.json):**
 
 ```json
-Copy code
 {
-    "target.com": [
-        "https://target.com/product1",
-        "https://target.com/product2"
-    ]
+    "amazon.com": [
+        "https://amazon.com/product1",
+        "https://amazon.com/product2"
+    ],
+    "lowes.com":[
+    ...
+    ],
+    ...
 }
 ```
 
 **Console Output:**
 
 ```yaml
-Copy code
 Crawling Statistics:
 Total Requests: 200
 Successful Requests: 180
