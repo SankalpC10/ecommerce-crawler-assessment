@@ -119,7 +119,7 @@ class EcommerceCrawler:
 
 def main():
     # domains = ["amazon.in","amazon.com","albertsons.com", "ebay.com", "target.com"]
-    domains = ["myntra.com"]
+    domains = ["argos.co.uk"]
     crawler = EcommerceCrawler(domains)
     results = crawler.run()
  
