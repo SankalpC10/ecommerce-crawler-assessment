@@ -36,7 +36,8 @@ python ecommerce_crawler.py
 
 ## Configuration Options
 
-|Parameter | Description |	Default
+Parameter | Description |	Default
+--- | --- | ---
 domains	List of e-commerce | domains to crawl. |	Required
 max_depth |	Maximum depth for recursive crawling. |	3
 concurrent_requests |	Number of concurrent requests per domain. |	5
