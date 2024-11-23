@@ -29,7 +29,7 @@ Configure Domains: Specify the target domains in the domains list.
 Run the Crawler:
 
 ```bash
-python ecommerce_crawler.py
+python main.py
 ```
 - Crawled product URLs are saved in product_urls.json.
 - Crawling statistics are printed to the console.
