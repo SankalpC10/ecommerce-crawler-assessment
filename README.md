@@ -1,4 +1,4 @@
-# Enhanced Ecommerce Crawler
+# Ecommerce Crawler
 
 ## Overview
 The Enhanced Ecommerce Crawler is a Python-based asynchronous web crawler designed for efficiently discovering and extracting product URLs from e-commerce websites. The crawler supports advanced features like JavaScript rendering, user-agent rotation, and compliance with robots.txt. It also incorporates retailer-specific patterns for improved crawling precision.
